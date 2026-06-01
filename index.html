@@ -1,94 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoRecicla</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRecicla Agrinho</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>🌱 EcoRecicla</h1>
-    <p>
-      Pequenas atitudes fazem uma grande diferença.
-      Aprenda mais sobre reciclagem e ajude a preservar o planeta.
-    </p>
-  </header>
+    <header class="hero-section">
+        <div class="container">
+            <h1>🌱 EcoRecicla Agrinho</h1>
+            <p>Conectando a sustentabilidade do campo à cidade. Pequenas atitudes geram um impacto global na nossa agricultura e no meio ambiente.</p>
+            <nav class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#materiais">Materiais</a>
+                <a href="#dicas">Dicas</a>
+                <a href="#impacto">Impacto Escolar</a>
+            </nav>
+        </div>
+    </header>
 
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#materiais">Materiais</a>
-    <a href="#dicas">Dicas</a>
-    <a href="#impacto">Impacto</a>
-  </nav>
+    <main class="container">
+        <section id="sobre" class="section-card">
+            <h2>♻️ O que é reciclagem no Agrinho?</h2>
+            <p>A reciclagem e a logística reversa são fundamentais para integrar o desenvolvimento rural e urbano. Ao transformar materiais usados em novos produtos, reduzimos a poluição do solo e da água, economizamos recursos naturais e protegemos a biodiversidade que sustenta o nosso agronegócio.</p>
+        </section>
 
-  <section id="sobre">
-    <h2>♻️ O que é reciclagem?</h2>
-    <p>
-      A reciclagem é o processo de transformar materiais usados em novos produtos,
-      reduzindo a poluição, economizando recursos naturais e diminuindo o lixo no planeta.
-    </p>
-  </section>
+        <section id="materiais" class="section-card">
+            <h2>🗂️ Gestão de Resíduos: Campo e Cidade</h2>
+            <div class="grid-materiais">
+                <div class="material-item">
+                    <h3>📄 Papel e Papelão</h3>
+                    <p>Caixas de sementes, sacos de insumos e embalagens secas. A reciclagem evita o desmatamento e protege as nossas bacias hidrográficas.</p>
+                </div>
+                <div class="material-item">
+                    <h3>🍾 Plásticos e Logística Reversa</h3>
+                    <p>Além das garrafas PET, o campo lida com embalagens de defensivos agrícolas. É vital destacar a importância da lavagem tripla e da devolução correta destes materiais para proteger o solo.</p>
+                </div>
+                <div class="material-item">
+                    <h3>🥫 Metal e Ferramentas</h3>
+                    <p>Latas de alimentos e restos de arames ou peças de maquinaria. O metal reciclado economiza mineração e poupa energia.</p>
+                </div>
+                <div class="material-item">
+                    <h3>🍶 Vidro e Biodiversidade</h3>
+                    <p>Garrafas e potes descartados incorretamente no campo podem causar incêndios (efeito lupa com o sol) ou ferir animais e gado. A reciclagem infinita do vidro protege a fauna e a flora.</p>
+                </div>
+            </div>
+        </section>
 
-  <section id="materiais">
-    <h2>🗂️ Materiais Recicláveis</h2>
+        <section id="dicas" class="section-card">
+            <h2>💡 Dicas Sustentáveis para a Comunidade</h2>
+            <ul class="dicas-lista">
+                <li><strong>✅ Pratique a Compostagem:</strong> Transforme os restos de comida da cantina escolar e folhas secas em adubo orgânico para a horta da escola ou da sua propriedade.</li>
+                <li><strong>✅ Apoie a Logística Reversa:</strong> Garanta que pilhas, baterias e eletrônicos usados na comunidade não sejam descartados no solo rural, evitando a contaminação dos lençóis freáticos.</li>
+                <li><strong>✅ Economize Água na Produção:</strong> Adote práticas de captação da água da chuva para irrigação de jardins e hortas comunitárias.</li>
+                <li><strong>✅ Reduza o Desperdício:</strong> Prefira alimentos produzidos localmente por pequenos agricultores, diminuindo a pegada de carbono do transporte e o uso de embalagens desnecessárias.</li>
+            </ul>
+        </section>
 
-    <div class="cards">
+        <section id="impacto" class="section-card contador-section">
+            <h2>Pegada Ecológica Escolar</h2>
+            <p>Registre aqui cada quilo de material reciclável trazido para os ecopontos da nossa escola. Juntos, reduzimos o lixo que vai para os aterros e protegemos o ecossistema local.</p>
+            
+            <div class="contador-container">
+                <span id="numero-contador" class="numero-destaque">0</span>
+                <p>Quilos de materiais reciclados pela comunidade escolar</p>
+            </div>
+            
+            <button id="btn-reciclar" onclick="registrarReciclagem()">Registrar Reciclagem na Escola (+1kg)</button>
+        </section>
+    </main>
 
-      <div class="card">
-        <h3>📄 Papel</h3>
-        <p>Jornais, revistas, caixas e folhas usadas podem ser reciclados.</p>
-      </div>
+    <footer>
+        <p>🌍 EcoRecicla Agrinho © 2026 - Juntos por um planeta e um campo mais limpos.</p>
+    </footer>
 
-      <div class="card">
-        <h3>🍾 Plástico</h3>
-        <p>Garrafas PET, embalagens e recipientes plásticos podem virar novos produtos.</p>
-      </div>
-
-      <div class="card">
-        <h3>🥫 Metal</h3>
-        <p>Latas de alumínio e aço possuem alto potencial de reciclagem.</p>
-      </div>
-
-      <div class="card">
-        <h3>🍶 Vidro</h3>
-        <p>Garrafas e potes de vidro podem ser reciclados infinitamente.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="dicas">
-    <h2>💡 Dicas Sustentáveis</h2>
-
-    <ul class="tips">
-      <li>✅ Separe o lixo orgânico do reciclável.</li>
-      <li>✅ Reutilize embalagens sempre que possível.</li>
-      <li>✅ Evite desperdício de água e energia.</li>
-      <li>✅ Prefira produtos reutilizáveis.</li>
-      <li>✅ Descarte eletrônicos em locais apropriados.</li>
-    </ul>
-  </section>
-
-  <section id="impacto">
-
-    <div class="contador">
-      <h2 id="numero">0</h2>
-      <p>Materiais reciclados por visitantes do site</p>
-
-      <button onclick="reciclar()">
-        Recicle Agora
-      </button>
-    </div>
-
-  </section>
-
-  <footer>
-    <p>🌍 EcoRecicla © 2026 - Juntos por um planeta mais limpo.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
