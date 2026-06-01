@@ -1,37 +1,16 @@
-let contador = 0;
+// Recupera o valor salvo no navegador ou começa em 0 se for a primeira vez
+let totalReciclado = localStorage.getItem('ecoRecicladoContador') ? parseInt(localStorage.getItem('ecoRecicladoContador')) : 0;
 
-function reciclar() {
-  contador++;
+// Atualiza a tela assim que a página carrega
+document.getElementById('numero-contador').innerText = totalReciclado;
 
-  const numero = document.getElementById("numero");
-
-  numero.innerText = contador;
-
-  // efeito visual
-  numero.style.transform = "scale(1.2)";
-  numero.style.color = "#00aa55";
-
-  setTimeout(() => {
-    numero.style.transform = "scale(1)";
-    numero.style.color = "#2e8b57";
-  }, 200);
+function registrarReciclagem() {
+    // Adiciona 1kg ao contador
+    totalReciclado += 1;
+    
+    // Atualiza o texto na tela
+    document.getElementById('numero-contador').innerText = totalReciclado;
+    
+    // Salva o novo valor no banco de dados local do navegador
+    localStorage.setItem('ecoRecicladoContador', totalReciclado);
 }
-
-/* animação suave ao clicar no menu */
-
-const links = document.querySelectorAll("nav a");
-
-links.forEach(link => {
-  link.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    const id = this.getAttribute("href");
-    const section = document.querySelector(id);
-
-    section.scrollIntoView({
-      behavior: "smooth"
-    });
-
-  });
-});
